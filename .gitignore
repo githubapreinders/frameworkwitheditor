@@ -1,0 +1,6 @@
+.settings
+target
+.DS_Store
+src/main/webapp/iaf/editor/node_modules
+src/main/webapp/iaf/editor/app/bower_components
+

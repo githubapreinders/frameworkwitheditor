@@ -1,0 +1,13 @@
+<!DOCTYPE configuration [
+	
+	
+]>
+<configuration name="ibis4integration">
+	<jmsRealms>
+		<jmsRealm realmName="jdbc" datasourceName="jdbc/${instance.name.lc}"/>
+	</jmsRealms>
+
+	
+	  
+	
+</configuration>

@@ -1,0 +1,41 @@
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+	 <changeSet id="createibisconfig" author="apreinders" failOnError="false">
+		<createTable tableName="IBISCONFIG">
+			<column name="NAME" type="varchar(100)">
+				<constraints primaryKey="true" unique="true" nullable="false" ></constraints>
+			</column>
+			<column name="VERSION" type="varchar(50)">
+				<constraints primaryKey="true" unique="true" nullable="false" ></constraints>
+			</column>
+			<column name="FILENAME" 	type="varchar(100)"></column>
+			<column name="CONFIG" 		type="blob"></column>
+			<column name="CRE_TYDST"	type="datetime"></column>
+			<column name="RUSER" 		type="varchar(32)"></column>
+			<column name="ACTIVECONFIG" type="boolean"></column>
+			<column name="AUTORELOAD" 	type="boolean"></column>
+		</createTable>
+	</changeSet>
+
+	<changeSet id="insertdata" author="apreinders" failOnError="false">
+		<insert tableName="IBISCONFIG">
+			<column name="NAME" 		value="Ibis4Teacher"></column>
+			<column name="VERSION" 		value="1541281551888"></column>
+			<column name="FILENAME" 	value="src/main/resources/configuration.zip"></column>
+			<column name="CONFIG" 		valueBlobFile="configuration.zip"></column>
+			<column name="CRE_TYDST"	valueDate="2018-01-31T23:59:59"></column>
+			<column name="ACTIVECONFIG" valueBoolean="true"></column>
+			<column name="AUTORELOAD" 	valueBoolean="true"></column>
+		</insert>
+	</changeSet>
+
+
+
+
+
+	
+</databaseChangeLog>
