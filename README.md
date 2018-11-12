@@ -8,7 +8,7 @@ This project has as purpose to investigate the possibilite to add an editor to t
 * In databasechangelog the ibisconfig table is made to store newly uploaded configs via the database classloader system. Also an empty zipped configuration is loaded
 * run the Ibis from Eclipse ; within the menu 'Configurations' you will have the option to add a new configuration. For now this configuration must be under a static name 'Ibis4Teacher';
 
-##TODOS
+## TODOS
 * Make Eddie Stateless
 * Repair doubled tabs within the manage configurations menu
 * Have a decent code review
